@@ -3,6 +3,7 @@
     <h2><%= @cocktail.name %></h2>
   </div>
 </div>
+<p><%= @dose.description %></p>
 
 <%= render 'doses/new', cocktail: @cocktail, dose: @dose %>
-<%= link_to 'Back', cocktails_path class: "btn btn-primary" %>
+<%= link_to 'Back', cocktails_path, class: "btn btn-primary" %>
