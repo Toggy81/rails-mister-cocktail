@@ -4,6 +4,7 @@ class CocktailsController < ApplicationController
   end
   def show
     @cocktail = Cocktail.find(params[:id])
+    @dose = Dose.new
   end
 
   def new
@@ -13,13 +14,10 @@ class CocktailsController < ApplicationController
   def create
     @cocktail = Cocktail.new(cocktail_params)
     if @cocktail.save
-      # @cocktail.save!
-      redirect_to cocktail_show_path(@cocktail)
+      redirect_to cocktail_path(@cocktail)
     else
-      # @cocktail = Cocktail.new(cocktail_params)
-      redirect_to cocktails_new_path
+      render 'new'
     end
-    # no need for app/views/cocktails/create.html.erb
   end
 
   private
