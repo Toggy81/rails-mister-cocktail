@@ -7,16 +7,21 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="row">
+<h4>Cocktails Menu</h4>
+<!-- horizontal flip -->
+
+<!-- <div class="container">
+  <div class="row"> -->
     <% @cocktails.each do |cocktail| %>
-    <div class="col-xs-12 col-sm-3">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-        <div class="card-description">
-          <h2><%= cocktail.name %></h2>
-        </div>
-      </div>    </div>
-      <% end %>
-    </div>
-  </div>
-</div>
+    <div class="flip">
+      <div class="front" style="background-image: url(https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+       <h1 class="text-shadow"><%= cocktail.name %></hi>
+       </div>
+       <div class="back">
+        <h2><%= cocktail.name %></h2>
+       </div>
+     </div>
+     <% end %>
+   </div>
+<!--  </div>
+</div -->>
